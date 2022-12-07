@@ -15,6 +15,7 @@ export const Main =(props) =>{
 
           <div>
               <Routes>
+                  <Route path='/home' element={<Home/>} />
                   <Route path='/' element={<SignIn/>} />
               </Routes>
           </div>
