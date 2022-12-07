@@ -3,6 +3,7 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
+import { Navigation } from '../Navigation/navigation';
             
             const images = [
             
@@ -88,7 +89,9 @@ export const Home = (props)=>{
     
 
     return (
-        <>
+        <><Navigation>
+            
+        </Navigation>
         <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
                 {images.map((image) => (
                     <ImageButton

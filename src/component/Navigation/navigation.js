@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
-
-import {UserMoneyDisplay} from "./User/components/UserMoneyDisplay"
-import {UserShortDisplay} from "./User/components/UserShortDisplay"
-import {User} from './User/containers/User'
+import { User } from '../User/containers/User';
 
 export const Navigation = (props)=>{
     const [currentUser,setCurrentUser]= useState({
