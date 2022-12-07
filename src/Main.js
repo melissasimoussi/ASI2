@@ -10,13 +10,12 @@ export const Main =(props) =>{
   return (
   <>
       <BrowserRouter>
-        <NavLink to="/login"> Login</NavLink>
+        <NavLink to="/"> Login</NavLink>
 
 
           <div>
               <Routes>
-                  <Route path='/login' element={<SignIn/>} />
-                  <Route path='/' element={<Home/>} />
+                  <Route path='/' element={<SignIn/>} />
               </Routes>
           </div>
       </BrowserRouter>
