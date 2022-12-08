@@ -1,16 +1,10 @@
 import React, { useState } from 'react';
 import { User } from '../User/containers/User';
 import { Grid, Segment,Container } from 'semantic-ui-react';
-import { User } from '../User/containers/User';
 
 export const Navigation = (props)=>{
-    const [currentUser,setCurrentUser]= useState({
-        img:'https://www.nicepng.com/png/full/982-9820051_heart-2352306885-deadpool-png.png',
-        login:"TOTO",
-        pwd:"oui",
-        money:1000,
-    
-    });
+    let [currentUser,setCurrentUser]= useState([]);
+
     return (
 <Container>
     <Grid divided='vertically'>
