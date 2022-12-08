@@ -21,7 +21,7 @@ export const CardList=(props) =>{
 
 let display = rows.map((item)=>{
     console.log(item)
-    return < Card name={props.name} money={props.price} display="LINE_LABEL"/>;
+    return < Card name={item.name} money={item.price} display_type="LINE_LABEL"> </Card>;
 });
 
 return (display);

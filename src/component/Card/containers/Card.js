@@ -2,8 +2,8 @@ import React from 'react';
 import {CardSimpleDisplay} from '../components/CardSimpleDisplay';
 import {CardLineDisplay} from '../components/CardLineDisplay'
 
-const LINE_LABEL='LINE';
-const SIMPLE_LABEL='SIMPLE';
+const LINE_LABEL='LINE_LABEL';
+const SIMPLE_LABEL='SIMPLE_LABEL';
 
 export const Card=(props)=> {
     let display="";
