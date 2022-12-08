@@ -1,23 +1,16 @@
 import React from 'react';
-import { Image, List, ListItem, View, ScrollView} from 'semantic-ui-react';
+import { View, ScrollView} from 'react-native';
+import { List, ListItem} from 'semantic-ui-react';
+import { Table, TableRow, TableCell } from '@mui/material'
 
  export const CardLineDisplay=(props) =>{
     return (
-        <View>
-        <ScrollView horizontal = {true}>
-        <List>
-            <List.Item>  
-                {props.img}
-            </List.Item>
-            <ListItem>
-                {props.name}
-            </ListItem>
-            <ListItem>
-                {props.money} $
-            </ListItem>
+        <Table>
+            <TableRow>
+                <TableCell>{props.name}</TableCell>
+                <TableCell>{props.money} $</TableCell>
+            </TableRow>
+        </Table>
 
-        </List>
-        </ScrollView>
-        </View>
         );
 }
