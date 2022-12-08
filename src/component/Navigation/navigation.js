@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { User } from '../User/containers/User';
 import { Grid, Segment,Container } from 'semantic-ui-react';
-import { User } from '../User/containers/User';
 
 export const Navigation = (props)=>{
     const [currentUser,setCurrentUser]= useState({

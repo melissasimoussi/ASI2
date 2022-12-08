@@ -5,7 +5,7 @@ import {CardLineDisplay} from '../components/CardLineDisplay'
 const LINE_LABEL='LINE';
 const SIMPLE_LABEL='SIMPLE';
 
-export const User=(props)=> {
+export const Card=(props)=> {
     let display="";
     switch(props.display_type){
         case SIMPLE_LABEL:
@@ -22,7 +22,6 @@ export const User=(props)=> {
         case LINE_LABEL:
             display=(                
                 <CardLineDisplay
-                    img = {props.img}
                     name={props.name}
                     money = {props.money}>
                 </CardLineDisplay>
