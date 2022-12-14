@@ -43,7 +43,7 @@ export default function SignIn() {
       body: JSON.stringify({ username: data.get('username'),
     password: data.get('password') })
   };
-  fetch('http://tp.cpe.fr:8083/auth', requestOptions)
+  fetch('http://vps.cpe-sn.fr:8083/auth', requestOptions)
       .then(response => response.json())
       .then ((data) => {
         getUserFromId(data)
@@ -56,7 +56,7 @@ export default function SignIn() {
     const requestOptions = {
       method: 'GET',
       };
-      fetch('http://tp.cpe.fr:8083/user/'+id, requestOptions)
+      fetch('http://vps.cpe-sn.fr:8083/user/'+id, requestOptions)
         .then(response => response.json())
         .then ((data) => {
           getConnection()
