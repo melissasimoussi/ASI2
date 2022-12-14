@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Grid, Segment } from 'semantic-ui-react';
 import { Home } from './component/Home/home';
 import SignIn from './component/Auth/auth';
+import { Play } from './component/Game/play';
 import { CardList } from './component/Market/CardList';
 
 
@@ -20,6 +21,8 @@ export const Main =(props) =>{
                   <Route path='/home' element={<Home/>} />
                   <Route path='/cards' element={<CardList/>} />
                   <Route path='/' element={<SignIn/>} />
+				  <Route path='/play' element={<Play/>} />
+
               </Routes>
           </div>
       </BrowserRouter>
