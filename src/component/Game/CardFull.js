@@ -3,10 +3,9 @@ import {Card} from '../Card/containers/Card';
 import { CardBoardDisplay } from '../Card/components/CardBoardDisplay';
 import { View, ScrollView} from 'react-native'
 import { List, ListItem} from 'semantic-ui-react';
-import Box from '@mui/material/Box';
 
 
-export const CardBoard=(props) =>{
+export const CardFull=(props) =>{
     var [columns, setColumns] = useState([])
 
     useEffect(() => {
@@ -25,10 +24,9 @@ let display=[];
     i=i+1;
     console.log(item)
     console.log(i)
-    if (i<5) {
-    display.push((< Card key={i} name={item.name} url={item.smallImgUrl} energy={item.energy} hp={item.hp} display_type="BOARD_LABEL"> </Card>));}
+    display.push((< Card key={i} name={item.name} url={item.imgUrl} energy={item.energy} hp={item.hp} description={item.description} family={item.family} attack={item.attack} defense={item.defense} money={item.money} display_type="FULL_LABEL"> </Card>));
 });
 
-return (<><Box display='flex'>{display}</Box></>);
+return (<>{display}</>);
     
 }

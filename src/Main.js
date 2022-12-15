@@ -26,6 +26,8 @@ export const Main =(props) =>{
               </Routes>
           </div>
       </BrowserRouter>
+      
+
   </>
 );
 }

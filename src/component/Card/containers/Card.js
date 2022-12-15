@@ -2,6 +2,7 @@ import React from 'react';
 import {CardSimpleDisplay} from '../components/CardSimpleDisplay';
 import {CardLineDisplay} from '../components/CardLineDisplay'
 import { CardBoardDisplay } from '../components/CardBoardDisplay';
+import { CardFullDisplay } from '../components/CardFullDisplay';
 
 const LINE_LABEL='LINE_LABEL';
 const SIMPLE_LABEL='SIMPLE_LABEL';
@@ -45,7 +46,7 @@ export const Card=(props)=> {
             );
             break;
 
-        /*case FULL_LABEL:
+        case FULL_LABEL:
             display = (
                 <CardFullDisplay
                     name={props.name}
@@ -55,11 +56,11 @@ export const Card=(props)=> {
                     description={props.description}
                     family={props.family}
                     attack={props.attack}
-                    defence={props.defence}
+                    defense={props.defense}
                     money={props.money}>
                 </CardFullDisplay>
             );
-            break;*/
+            break;
         default:
             display=(<h4>No Display Available</h4>);
     }
