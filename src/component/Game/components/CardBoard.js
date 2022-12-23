@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import {Card} from '../Card/containers/Card';
-import { CardBoardDisplay } from '../Card/components/CardBoardDisplay';
+import {Card} from '../../Card/containers/Card';
+import { CardBoardDisplay } from '../../Card/components/CardBoardDisplay';
 
 
 

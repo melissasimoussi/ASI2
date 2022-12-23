@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import {Card} from '../Card/containers/Card';
+import Card from '../../Card/containers/Card';
 import { useSelector } from 'react-redux';
 import { CardBoard } from './CardBoard';
-import { CardBoardDisplay } from '../Card/components/CardBoardDisplay';
+import { CardBoardDisplay } from '../../Card/components/CardBoardDisplay';
 import { View, ScrollView} from 'react-native'
 import { List, Listcard} from 'semantic-ui-react';
 
