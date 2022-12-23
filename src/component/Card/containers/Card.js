@@ -3,6 +3,8 @@ import {CardSimpleDisplay} from '../components/CardSimpleDisplay';
 import {CardLineDisplay} from '../components/CardLineDisplay'
 import { CardBoardDisplay } from '../components/CardBoardDisplay';
 import { CardFullDisplay } from '../components/CardFullDisplay';
+import { updateCurrentCard } from '../../../actions';
+import { useDispatch } from "react-redux";
 
 const LINE_LABEL='LINE_LABEL';
 const SIMPLE_LABEL='SIMPLE_LABEL';
@@ -10,6 +12,13 @@ const BOARD_LABEL='BOARD_LABEL';
 const FULL_LABEL='FULL_LABEL';
 
 export const Card=(props)=> {
+    let dispatch=useDispatch();
+
+    function handleOnClick(){
+        dispatch(updateCurrentCard(props.card));
+    }
+    
+
     if(props == undefined){
         return (<></>);
     }
@@ -37,12 +46,14 @@ export const Card=(props)=> {
         
         case BOARD_LABEL:
             display = (
-                <CardBoardDisplay
+                <div onClick={handleOnClick}>
+                <CardBoardDisplay 
                     name={props.name}
                     url={props.smallImgUrl}
                     energy={props.energy}
                     hp={props.hp}>
                 </CardBoardDisplay>
+                </div>
             );
             break;
 

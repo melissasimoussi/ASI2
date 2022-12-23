@@ -14,6 +14,7 @@ export const Main =(props) =>{
       <BrowserRouter>
         <NavLink to="/"> Login</NavLink>
         <NavLink to="/cards"> Cards</NavLink>
+        <NavLink to="/home"> Home</NavLink>
 
 
           <div>

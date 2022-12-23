@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import {Card} from '../Card/containers/Card';
 import { CardBoardDisplay } from '../Card/components/CardBoardDisplay';
-import { View, ScrollView} from 'react-native'
-import { List, ListItem} from 'semantic-ui-react';
-import Box from '@mui/material/Box';
+
 
 
 export const CardBoard=(props) =>{
     var [columns, setColumns] = useState([])
+    
+    
 
     useEffect(() => {
     fetch("http://vps.cpe-sn.fr:8083/cards")
@@ -20,15 +20,23 @@ export const CardBoard=(props) =>{
 },[])
 
 let i=0;
-let display=[];
- columns.map((item)=>{
+let render=[];
+ columns.map((props)=>{
     i=i+1;
-    console.log(item)
+    console.log(props)
     console.log(i)
     if (i<5) {
-    display.push((< Card key={i} name={item.name} url={item.smallImgUrl} energy={item.energy} hp={item.hp} display_type="BOARD_LABEL"> </Card>));}
+    render.push(<div className="four wide column centered" >
+        < Card key={i} name={props.name} url={props.smallImgUrl} energy={props.energy} hp={props.hp} display_type="BOARD_LABEL"> </Card>
+        </div>)}
 });
 
-return (<><Box display='flex'>{display}</Box></>);
+let display = (
+            <div className="CardBoard ui grid block-container">
+                {render}
+            </div>
+        );
+
+return display;
     
 }

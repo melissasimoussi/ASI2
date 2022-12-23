@@ -4,12 +4,17 @@ import './index.css';
 import Main from './Main';
 import reportWebVitals from './reportWebVitals';
 import 'semantic-ui-css/semantic.min.css';
+import { Provider } from 'react-redux';
+import store from './store';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
-    <Main/>
+    <Provider store={store} >
+    <Main></Main>
+  </Provider>
+    
 
 );
 
